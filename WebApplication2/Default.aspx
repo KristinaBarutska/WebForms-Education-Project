@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication2.Default" %>
 
+<%@ Register src="UserControls/Header.ascx" tagname="Header" tagprefix="UserControl" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,8 +17,13 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form defaultbutton="SubmitButton" defaultfocus="FirstNameTextBox" id="form1" runat="server">
         <table class="auto-style1">
+            <tr>
+                <td colspan="2">
+                    <UserControl:Header ID="Header1" runat="server" />
+                </td>
+            </tr>
             <tr>
                 <td class="auto-style2">First Name</td>
                 <td>
