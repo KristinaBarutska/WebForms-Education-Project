@@ -74,11 +74,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\NORTHWND.LDF">
+      <DependentUpon>NORTHWND.MDF</DependentUpon>
+    </Content>
+    <Content Include="App_Data\NORTHWND.MDF" />
+    <Content Include="DatabaseDemo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="UserControls\Header.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseDemo.aspx.cs">
+      <DependentUpon>DatabaseDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseDemo.aspx.designer.cs">
+      <DependentUpon>DatabaseDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,6 +107,7 @@
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
